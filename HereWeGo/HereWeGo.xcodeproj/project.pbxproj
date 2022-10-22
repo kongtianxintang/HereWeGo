@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98C2B1E16F7A642A9978D567 /* Pods_HereWeGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367C48524D706E7F60C4542D /* Pods_HereWeGo.framework */; };
 		D08434292904314F007D8DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08434282904314F007D8DDB /* AppDelegate.swift */; };
 		D084342B2904314F007D8DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084342A2904314F007D8DDB /* SceneDelegate.swift */; };
 		D084342D2904314F007D8DDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084342C2904314F007D8DDB /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17C99B6C9FAF4986A0A00867 /* Pods-HereWeGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereWeGo.release.xcconfig"; path = "Target Support Files/Pods-HereWeGo/Pods-HereWeGo.release.xcconfig"; sourceTree = "<group>"; };
+		367C48524D706E7F60C4542D /* Pods_HereWeGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HereWeGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08434252904314F007D8DDB /* HereWeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereWeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08434282904314F007D8DDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D084342A2904314F007D8DDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D084343129043153007D8DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D084343429043153007D8DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D084343629043153007D8DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0A1E0D60BF4821EC46C6169 /* Pods-HereWeGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereWeGo.debug.xcconfig"; path = "Target Support Files/Pods-HereWeGo/Pods-HereWeGo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98C2B1E16F7A642A9978D567 /* Pods_HereWeGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03D7E570400894322E8E0B71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0A1E0D60BF4821EC46C6169 /* Pods-HereWeGo.debug.xcconfig */,
+				17C99B6C9FAF4986A0A00867 /* Pods-HereWeGo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		10EE357669967EF8A37B4477 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				367C48524D706E7F60C4542D /* Pods_HereWeGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D084341C2904314F007D8DDB = {
 			isa = PBXGroup;
 			children = (
 				D08434272904314F007D8DDB /* HereWeGo */,
 				D08434262904314F007D8DDB /* Products */,
+				03D7E570400894322E8E0B71 /* Pods */,
+				10EE357669967EF8A37B4477 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D084343929043153007D8DDB /* Build configuration list for PBXNativeTarget "HereWeGo" */;
 			buildPhases = (
+				B0555ACC654A888476DCB57F /* [CP] Check Pods Manifest.lock */,
 				D08434212904314F007D8DDB /* Sources */,
 				D08434222904314F007D8DDB /* Frameworks */,
 				D08434232904314F007D8DDB /* Resources */,
+				69A9A0D62AAC59C91D6E55AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69A9A0D62AAC59C91D6E55AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HereWeGo/Pods-HereWeGo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HereWeGo/Pods-HereWeGo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HereWeGo/Pods-HereWeGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0555ACC654A888476DCB57F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HereWeGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D08434212904314F007D8DDB /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		D084343A29043153007D8DDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A1E0D60BF4821EC46C6169 /* Pods-HereWeGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		D084343B29043153007D8DDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C99B6C9FAF4986A0A00867 /* Pods-HereWeGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
