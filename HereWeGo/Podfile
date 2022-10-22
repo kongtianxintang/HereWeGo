@@ -1,0 +1,10 @@
+platform:ios,'13.0'
+use_frameworks!
+
+target 'HereWeGo' do
+
+	# 网络库
+	pod 'Alamofire'
+	# 图片库
+	pod 'Kingfisher'
+end
