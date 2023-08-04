@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		98C2B1E16F7A642A9978D567 /* Pods_HereWeGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367C48524D706E7F60C4542D /* Pods_HereWeGo.framework */; };
+		D01E2D8D29D5C9CC003ADB08 /* kwcs_api.c in Sources */ = {isa = PBXBuildFile; fileRef = D01E2D8C29D5C9CC003ADB08 /* kwcs_api.c */; };
 		D08434292904314F007D8DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08434282904314F007D8DDB /* AppDelegate.swift */; };
 		D084342B2904314F007D8DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084342A2904314F007D8DDB /* SceneDelegate.swift */; };
 		D084342D2904314F007D8DDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084342C2904314F007D8DDB /* ViewController.swift */; };
@@ -19,6 +20,9 @@
 /* Begin PBXFileReference section */
 		17C99B6C9FAF4986A0A00867 /* Pods-HereWeGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereWeGo.release.xcconfig"; path = "Target Support Files/Pods-HereWeGo/Pods-HereWeGo.release.xcconfig"; sourceTree = "<group>"; };
 		367C48524D706E7F60C4542D /* Pods_HereWeGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HereWeGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01E2D8A29D5C9CB003ADB08 /* HereWeGo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HereWeGo-Bridging-Header.h"; sourceTree = "<group>"; };
+		D01E2D8B29D5C9CC003ADB08 /* kwcs_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kwcs_api.h; sourceTree = "<group>"; };
+		D01E2D8C29D5C9CC003ADB08 /* kwcs_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kwcs_api.c; sourceTree = "<group>"; };
 		D08434252904314F007D8DDB /* HereWeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereWeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08434282904314F007D8DDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D084342A2904314F007D8DDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				D0A1E0D60BF4821EC46C6169 /* Pods-HereWeGo.debug.xcconfig */,
 				17C99B6C9FAF4986A0A00867 /* Pods-HereWeGo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +91,9 @@
 				D084343129043153007D8DDB /* Assets.xcassets */,
 				D084343329043153007D8DDB /* LaunchScreen.storyboard */,
 				D084343629043153007D8DDB /* Info.plist */,
+				D01E2D8B29D5C9CC003ADB08 /* kwcs_api.h */,
+				D01E2D8C29D5C9CC003ADB08 /* kwcs_api.c */,
+				D01E2D8A29D5C9CB003ADB08 /* HereWeGo-Bridging-Header.h */,
 			);
 			path = HereWeGo;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 				TargetAttributes = {
 					D08434242904314F007D8DDB = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -207,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01E2D8D29D5C9CC003ADB08 /* kwcs_api.c in Sources */,
 				D084342D2904314F007D8DDB /* ViewController.swift in Sources */,
 				D08434292904314F007D8DDB /* AppDelegate.swift in Sources */,
 				D084342B2904314F007D8DDB /* SceneDelegate.swift in Sources */,
@@ -355,11 +363,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4K52PEMM5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HereWeGo/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "获取定位";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -373,6 +383,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pix.ios.HereWeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HereWeGo/HereWeGo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,11 +396,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4K52PEMM5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HereWeGo/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "获取定位";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -402,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pix.ios.HereWeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HereWeGo/HereWeGo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

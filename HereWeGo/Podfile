@@ -1,4 +1,4 @@
-platform:ios,'13.0'
+platform:ios,'16.0'
 use_frameworks!
 
 target 'HereWeGo' do
@@ -7,4 +7,5 @@ target 'HereWeGo' do
 	pod 'Alamofire'
 	# 图片库
 	pod 'Kingfisher'
+  
 end

@@ -1,9 +1,6 @@
-//
-//  AppDelegate.swift
-//  HereWeGo
-//
+//  @desc: 程序入口
+//  @project: HereWeGo
 //  Created by liwei on 2022/10/22.
-//
 
 import UIKit
 
